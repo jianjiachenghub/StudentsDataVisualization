@@ -1,0 +1,373 @@
+<!--创建人：简佳成-->
+<!--创建时间：2018.12.4-->
+<!--描述：客户详情展示页面框架 未完成-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+
+</head>
+<body style="margin: 0;padding: 0">
+<div id="p" class="easyui-panel" title="生活类数据 元/月"
+     style="width:100%;height:260px;padding:10px;background:#fafafa;overflow: hidden"
+     data-options="iconCls:'icon-save',closable:false,
+    collapsible:true,minimizable:false,maximizable:false">
+    <form id="ff" style="width: 100%">
+        <table id="sss" class="displayable" style="text-align:right;width: 100%">
+            <tr style="height: 60px;width: 100%">
+                <td style="width: 8%;">日用品:</td>
+                <td style="width: 25%;text-align: left;">
+                    <input type="text" class="easyui-textbox" data-options="required:true,validType:'phonePattern[phoneRegular]'" style="width: 80%;"
+                           id="input_dailyUse"/>
+                </td>
+                <td style="width: 8%">吃饭消费:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_eat" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+                <td style="width: 8%"><span class="required">*</span>水果:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_fruits" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+            </tr>
+
+            <tr style="height: 60px">
+                <td><span class="required">*</span>化妆品:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" data-options="required:true,validType:'phonePattern[phoneRegular]'" style="width: 80%;"
+                           id="input_cosmetics"/>
+                </td>
+                <td>体育用品:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_sports" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+                <td><span class="required">*</span>学习支出:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_study" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+            </tr>
+            <tr style="height: 60px">
+                <td><span class="required">*</span>虚拟充值:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" data-options="required:true,validType:'phonePattern[phoneRegular]'" style="width: 80%;"
+                           id="input_recharge"/>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+<div id="add" class="easyui-panel" title="健康类数据"
+     style="width:100%;height:200px;padding:10px;background:#fafafa;overflow: hidden"
+     data-options="iconCls:'icon-save',closable:false,
+    collapsible:true,minimizable:false,maximizable:false">
+    <form id="ff" style="width: 100%">
+        <table id="sssf" class="displayable" style="text-align:right;width: 100%">
+            <tr style="height: 60px;width: 100%">
+                <td style="width: 8%;"><span class="required">*</span>身高:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" data-options="required:true,validType:'phonePattern[phoneRegular]'" style="width: 80%"
+                           id="input_high"/>
+                </td>
+                <td style="width: 8%"><span class="required">*</span>体重:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_weight" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+                <td style="width: 8%"><span class="required">*</span>年龄:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_year" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+            </tr>
+            <tr style="height: 60px">
+                <td><span class="required">*</span>周运动时间:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'" style="width: 80%;"
+                           id="input_sportsHour"/>
+                </td>
+                <td><span class="required">*</span>睡眠时间</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_sweepHour" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div id="r" class="easyui-panel" title="娱乐类数据 小时/月"
+     style="width:100%;height:260px;padding:10px;background:#fafafa;"
+     data-options="iconCls:'icon-save',closable:false,
+    collapsible:true,minimizable:false,maximizable:false">
+    <form id="ff" style="width: 100%">
+        <table id="sssf" class="displayable" style="text-align:right;width: 100%">
+            <tr style="height: 60px;width: 100%">
+                <td style="width: 8%;">阅读时间:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" data-options="required:true,validType:'phonePattern[phoneRegular]'" style="width: 80%"
+                           id="input_novel"/>
+                </td>
+                <td style="width: 8%">网上电影时间:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_pcmovie" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+                <td style="width: 8%">逛街时间:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_street" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+            </tr>
+
+            <tr style="height: 60px">
+                <td>聚餐时间:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" data-options="required:true,validType:'phonePattern[phoneRegular]'" style="width: 80%;"
+                           id="input_eating"/>
+                </td>
+                <td>电影院时间:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_movie" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+                <td>动漫时间:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_comic" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+            </tr>
+            <tr style="height: 60px">
+                <td>电视剧时间:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" data-options="required:true,validType:'phonePattern[phoneRegular]'" style="width: 80%;"
+                           id="input_tvplay"/>
+                </td>
+                <td>游戏时间:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_game" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+</div>
+<div id="r" class="easyui-panel" title="学习类数据"
+     style="width:100%;height:200px;padding:10px;background:#fafafa;"
+     data-options="iconCls:'icon-save',closable:false,
+    collapsible:true,minimizable:false,maximizable:false">
+    <form id="ff" style="width: 100%">
+        <table id="sssf" class="displayable" style="text-align:right;width: 100%">
+            <tr style="height: 60px;width: 100%">
+                <td style="width: 8%;">英语:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" data-options="required:true,validType:'phonePattern[phoneRegular]'" style="width: 80%"
+                           id="input_english"/>
+                </td>
+                <td style="width: 8%">高数:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_highmath" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+                <td style="width: 8%">C语言:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_c" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+            </tr>
+
+            <tr style="height: 60px">
+                <td>java:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" data-options="required:true,validType:'phonePattern[phoneRegular]'" style="width: 80%;"
+                           id="input_java"/>
+                </td>
+                <td>数据结构:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_structure" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+                <td>离散数学:</td>
+                <td style="width: 25%;text-align: left">
+                    <input type="text" class="easyui-textbox" id="input_discretemath" style="width: 80%;"
+                           data-options="required:true,validType:'phonePattern[phoneRegular]'"/>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<!--必须使用这个js而不是min.js ,因为做了封装修改-->
+<script type="text/javascript" src="../js/jquery.easyui.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/ip.js"></script>
+<script type="text/javascript" src="../js/ShareComponent.js"></script>
+<script type="text/javascript" src="../js/ToolBar.js"></script>
+<script type="text/javascript" src="../js/BasicList.js"></script>
+<script type="text/javascript" src="../js/Request.js"></script>
+<script type="text/javascript" src="../js/Enum.js"></script>
+<script src="../js/ip.js" type="text/javascript"></script>
+<script type="text/javascript">
+    console.log(GLOBAL_URL)
+    var gBasicList = new BasicListPage();
+    var gRequest = new RequestHandle();
+    var phoneRegular = /^[0-9]+$/;
+    var gPostAddData = new peopleDataObj();
+
+    $.extend($.fn.validatebox.defaults.rules, {
+        phonePattern: {
+            validator: function (value, param) {
+                return param[0].test(value);
+            },
+            message: '请输入正确的格式!'
+        }
+    });
+    console.log($)
+    $(document).keypress(function (e) {
+        // 回车键事件
+        if (e.which == 13) {
+            save()
+        }
+    });
+
+    function save() {
+        var flag = checkInput();
+        var _url;
+        if (flag) {
+            saveData(_url);
+        }else{
+            $.messager.alert("Info", "输入不规范");
+        }
+    }
+
+
+    var _data;
+
+    function saveData(_url) {
+        var adminData = JSON.parse(localStorage.getItem('admin'))
+        _data = submitFormData();
+        deleteBlankField(gPostAddData);
+        gPostAddData.students = {
+            number: adminData.login,
+            password: adminData.pwd,
+            lifeData: sumData('lifedata'),
+            healthyData: sumData('healthydata'),
+            studyData: sumData('studydata'),
+            playData: sumData('playdata'),
+        }
+        console.log(gPostAddData)
+        function sumData(o) {
+            var sum=0;
+            console.log(gPostAddData[o])
+            for(var key in gPostAddData[o])
+            {
+                sum+=parseFloat(gPostAddData[o][key]);
+                console.log(gPostAddData[o][key])
+            }
+            return sum;
+        }
+            var postData = JSON.stringify(gPostAddData);
+            $.ajax({
+            type: "post",
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+            },
+            url: GLOBAL_URL+'/students/students/add',
+            data: postData,
+            dataType: "json",
+        }).done(function (result) {
+            console.log(result)
+                if (result.errno == 0) {
+                    localStorage.setItem("stuData",JSON.stringify(result.data))
+                    window.location = '../index.html';
+                }
+                else {
+                    $.messager.alert("Info", "后台程序报错，注册失败哦");
+                }
+            });
+
+    }
+
+
+    function peopleDataObj() {
+        this.lifedata= {
+
+            dailyUse: "",
+                eat: "",
+                fruits: "",
+                cosmetics: "",
+                sports: "",
+                study: "",
+                recharge: ""
+        };
+        this.studydata={
+
+            english: "",
+                highmath: "",
+                c: "",
+                java: "",
+                structure: "",
+                discretemath: ""
+        };
+        this.playdata={
+
+            movie: "",
+            pcmovie:"",
+                street: "",
+                eating: "",
+                comic: "",
+                tvplay: "",
+                game: "",
+                novel: ""
+        };
+        this.healthydata={
+
+            high: "",
+                weight: "",
+                year: "",
+                sportsHour: "",
+                sweepHour: ""
+        }
+    }
+
+    function deleteBlankField(obj) {//递归遍历嵌套的obj，arr
+        if (typeof obj === 'object' && isNaN(obj.length)) {
+            for (var i  in  obj) {
+                if (typeof obj[i] === 'object' && isNaN(obj[i].length)) {
+                    deleteBlankField(obj[i]);
+                } else if (typeof obj[i] === 'object') {
+                    for (var j = 0; j < obj[i].length; j++) {
+                        deleteBlankField(obj[i][j]);
+                    }
+                } else {
+                    obj[i] = _data[i];
+                    if (obj[i] === "") {
+                        delete obj[i];
+                    }
+                }
+            }
+        } else if (typeof obj === 'object') {
+            for (var j = 0; j < obj.length; j++) {
+                deleteBlankField(obj[j]);
+            }
+        }
+    }
+
+
+</script>
+</html>
